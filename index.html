@@ -1,0 +1,1015 @@
+<!doctype html>
+<html>
+<head>
+    <title>Online Designer : Bootstrap</title>
+
+    <link rel="stylesheet" href="bootstrap3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="codemirror/docs.css">
+    <link rel="stylesheet" href="codemirror/codemirror.css">
+    <link rel="stylesheet" href="codemirror/show-hint.css">
+    <link rel="stylesheet" href="od-bootstrap.css">
+</head>
+
+<body>
+
+    <!-- Menu -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Online Design</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="od-bootstarp.html">Bootstrap</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right version">
+                    <li>Beta Version</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <!-- Sidebar -->
+        <div id="sidebar" class="col-md-2">
+            <div class="panel-group" id="accordion">
+
+                <!-- Containers -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseContainers">Containers</a>
+                        </h4>
+                    </div>
+                    <div id="collapseContainers" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Containers(1)">Container</button>
+                            <button class="btn btn-default" onclick="Containers(2)">Container Fluid</button>
+                            <button class="btn btn-default" onclick="Containers(3)">Jumbotron</button>
+                            <button class="btn btn-default" onclick="Containers(4)">Small Well</button>
+                            <button class="btn btn-default" onclick="Containers(5)">Well</button>
+                            <button class="btn btn-default" onclick="Containers(6)">Large Well</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grids -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseGrids">Grid</a>
+                        </h4>
+                    </div>
+                    <div id="collapseGrids" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Grids(true)">Add Row</button>
+                            <br/><br/>
+                            <div>
+                                <label class="control-label">X-Small :</label>
+                                <select id="gridXS" class="form-control">
+                                    <option value="">None</option>
+                                    <option value="hidden-xs">hidden-xs</option>
+                                    <option value="col-xs-1">col-xs-1</option>
+                                    <option value="col-xs-2">col-xs-2</option>
+                                    <option value="col-xs-3">col-xs-3</option>
+                                    <option value="col-xs-4">col-xs-4</option>
+                                    <option value="col-xs-5">col-xs-5</option>
+                                    <option value="col-xs-6">col-xs-6</option>
+                                    <option value="col-xs-7">col-xs-7</option>
+                                    <option value="col-xs-8">col-xs-8</option>
+                                    <option value="col-xs-9">col-xs-9</option>
+                                    <option value="col-xs-10">col-xs-10</option>
+                                    <option value="col-xs-11">col-xs-11</option>
+                                    <option value="col-xs-12">col-xs-12</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="control-label">Small :</label>
+                                <select id="gridSM" class="form-control">
+                                    <option value="">None</option>
+                                    <option value="hidden-sm">hidden-sm</option>
+                                    <option value="col-sm-1">col-sm-1</option>
+                                    <option value="col-sm-2">col-sm-2</option>
+                                    <option value="col-sm-3">col-sm-3</option>
+                                    <option value="col-sm-4">col-sm-4</option>
+                                    <option value="col-sm-5">col-sm-5</option>
+                                    <option value="col-sm-6">col-sm-6</option>
+                                    <option value="col-sm-7">col-sm-7</option>
+                                    <option value="col-sm-8">col-sm-8</option>
+                                    <option value="col-sm-9">col-sm-9</option>
+                                    <option value="col-sm-10">col-sm-10</option>
+                                    <option value="col-sm-11">col-sm-11</option>
+                                    <option value="col-sm-12">col-sm-12</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="control-label">Medium :</label>
+                                <select id="gridMD" class="form-control">
+                                    <option value="">None</option>
+                                    <option value="hidden-md">hidden-md</option>
+                                    <option value="col-md-1">col-md-1</option>
+                                    <option value="col-md-2">col-md-2</option>
+                                    <option value="col-md-3">col-md-3</option>
+                                    <option value="col-md-4">col-md-4</option>
+                                    <option value="col-md-5">col-md-5</option>
+                                    <option value="col-md-6">col-md-6</option>
+                                    <option value="col-md-7">col-md-7</option>
+                                    <option value="col-md-8">col-md-8</option>
+                                    <option value="col-md-9">col-md-9</option>
+                                    <option value="col-md-10">col-md-10</option>
+                                    <option value="col-md-11">col-md-11</option>
+                                    <option value="col-md-12">col-md-12</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="control-label">Large :</label>
+                                <select id="gridLG" class="form-control">
+                                    <option value="">None</option>
+                                    <option value="hidden-lg">hidden-lg</option>
+                                    <option value="col-lg-1">col-lg-1</option>
+                                    <option value="col-lg-2">col-lg-2</option>
+                                    <option value="col-lg-3">col-lg-3</option>
+                                    <option value="col-lg-4">col-lg-4</option>
+                                    <option value="col-lg-5">col-lg-5</option>
+                                    <option value="col-lg-6">col-lg-6</option>
+                                    <option value="col-lg-7">col-lg-7</option>
+                                    <option value="col-lg-8">col-lg-8</option>
+                                    <option value="col-lg-9">col-lg-9</option>
+                                    <option value="col-lg-10">col-lg-10</option>
+                                    <option value="col-lg-11">col-lg-11</option>
+                                    <option value="col-lg-12">col-lg-12</option>
+                                </select>
+                            </div>
+                            <br/>
+                            <button class="btn btn-default" onclick="Grids(false)">Add Div</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTypography">Typography</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTypography" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div>
+                                <label class="control-label">Color:</label>
+                                <select id="typoColor" class="form-control">
+                                    <option value="">None</option>
+                                    <option value="text-muted">Muted</option>
+                                    <option value="text-primary">Primary</option>
+                                    <option value="text-success">Success</option>
+                                    <option value="text-info">Info</option>
+                                    <option value="text-warning">Warning</option>
+                                    <option value="text-danger">Danger</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="control-label">Background:</label>
+                                <select id="typoBg" class="form-control">
+                                    <option value="">None</option>
+                                    <option value="bg-primary">Primary</option>
+                                    <option value="bg-success">Success</option>
+                                    <option value="bg-info">Info</option>
+                                    <option value="bg-warning">Warning</option>
+                                    <option value="bg-danger">Danger</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="control-label">Align:</label>
+                                <select id="typoAlign" class="form-control">
+                                    <option value="">None</option>
+                                    <option value="text-left">Left</option>
+                                    <option value="text-right">Right</option>
+                                    <option value="text-center">Center</option>
+                                    <option value="text-justify">Justify</option>
+                                </select>
+                            </div>
+                            <br/>
+                            <button class="btn btn-default" onclick="Typography(1)">h1</button>
+                            <button class="btn btn-default" onclick="Typography(2)">h2</button>
+                            <button class="btn btn-default" onclick="Typography(3)">h3</button>
+                            <button class="btn btn-default" onclick="Typography(4)">h4</button>
+                            <button class="btn btn-default" onclick="Typography(5)">h5</button>
+                            <button class="btn btn-default" onclick="Typography(6)">h6</button>
+                            <button class="btn btn-default" onclick="Typography(7)">p</button>
+                            <button class="btn btn-default" onclick="Typography(8)">pre</button>
+                            <button class="btn btn-default" onclick="Typography(9)">mark</button>
+                            <button class="btn btn-default" onclick="Typography(10)">abbr</button>
+                            <button class="btn btn-default" onclick="Typography(11)">blockquote</button>
+                            <button class="btn btn-default" onclick="Typography(12)">blockquote-reverse</button>
+                            <button class="btn btn-default" onclick="Typography(13)">code</button>
+                            <button class="btn btn-default" onclick="Typography(14)">kbd</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tables -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTables">Tables</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTables" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    Row: <input type="text" id="tableRow" style="width: 100%;">
+                                </div>
+                                <div class="col-xs-6">
+                                    Column: <input type="text" id="tableColumn" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="checkbox">
+                                <label><input id="tableResponsive" type="checkbox" value="table-responsive">Responsive</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input id="tableClass1" type="checkbox" value="table-striped">Striped</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input id="tableClass2" type="checkbox" value="table-bordered">Bordered</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input id="tableClass3" type="checkbox" value="table-hover">Hover</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input id="tableClass4" type="checkbox" value="table-condensed">Condensed</label>
+                            </div>
+                            <button class="btn btn-default" onclick="Tables()">Add Table</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Images -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseImages">Images</a>
+                        </h4>
+                    </div>
+                    <div id="collapseImages" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Images(1)">Simple</button>
+                            <button class="btn btn-default" onclick="Images(2)">Responsive</button>
+                            <button class="btn btn-default" onclick="Images(3)">Rounded</button>
+                            <button class="btn btn-default" onclick="Images(4)">Circle</button>
+                            <button class="btn btn-default" onclick="Images(5)">Thumbnail</button>
+                            <button class="btn btn-default" onclick="Images(6)">Responsive Rounded</button>
+                            <button class="btn btn-default" onclick="Images(7)">Responsive Circle</button>
+                            <button class="btn btn-default" onclick="Images(8)">Responsive Thumbnail</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alerts -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseAlerts">Alerts</a>
+                        </h4>
+                    </div>
+                    <div id="collapseAlerts" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Alerts(1)">Success</button>
+                            <button class="btn btn-default" onclick="Alerts(2)">Info</button>
+                            <button class="btn btn-default" onclick="Alerts(3)">Warning</button>
+                            <button class="btn btn-default" onclick="Alerts(4)">Danger</button>
+                            <button class="btn btn-default" onclick="Alerts(5)">Closing Success</button>
+                            <button class="btn btn-default" onclick="Alerts(6)">Closing Info</button>
+                            <button class="btn btn-default" onclick="Alerts(7)">Closing Warning</button>
+                            <button class="btn btn-default" onclick="Alerts(8)">Closing Danger</button>
+                            <button class="btn btn-default" onclick="Alerts(9)">Animated Closing Success</button>
+                            <button class="btn btn-default" onclick="Alerts(10)">Animated Closing Info</button>
+                            <button class="btn btn-default" onclick="Alerts(11)">Animated Closing Warning</button>
+                            <button class="btn btn-default" onclick="Alerts(12)">Animated Closing Danger</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Buttons -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseSmallButtons">Small Buttons</a>
+                        </h4>
+                    </div>
+                    <div id="collapseSmallButtons" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Buttons('s1')">Default</button>
+                            <button class="btn btn-primary" onclick="Buttons('s2')">Primary</button>
+                            <button class="btn btn-danger" onclick="Buttons('s3')">Danger</button>
+                            <button class="btn btn-warning" onclick="Buttons('s4')">Warning</button>
+                            <button class="btn btn-info" onclick="Buttons('s5')">Info</button>
+                            <button class="btn btn-success" onclick="Buttons('s6')">Success</button>
+                            <button class="btn btn-link" onclick="Buttons('s7')">Link</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseButtons">Buttons</a>
+                        </h4>
+                    </div>
+                    <div id="collapseButtons" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Buttons('m1')">Default</button>
+                            <button class="btn btn-primary" onclick="Buttons('m2')">Primary</button>
+                            <button class="btn btn-danger" onclick="Buttons('m3')">Danger</button>
+                            <button class="btn btn-warning" onclick="Buttons('m4')">Warning</button>
+                            <button class="btn btn-info" onclick="Buttons('m5')">Info</button>
+                            <button class="btn btn-success" onclick="Buttons('m6')">Success</button>
+                            <button class="btn btn-link" onclick="Buttons('m7')">Link</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Large Buttons -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseLargeButtons">Large Buttons</a>
+                        </h4>
+                    </div>
+                    <div id="collapseLargeButtons" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Buttons('l1')">Default</button>
+                            <button class="btn btn-primary" onclick="Buttons('l2')">Primary</button>
+                            <button class="btn btn-danger" onclick="Buttons('l3')">Danger</button>
+                            <button class="btn btn-warning" onclick="Buttons('l4')">Warning</button>
+                            <button class="btn btn-info" onclick="Buttons('l5')">Info</button>
+                            <button class="btn btn-success" onclick="Buttons('l6')">Success</button>
+                            <button class="btn btn-link" onclick="Buttons('l7')">Link</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Button Groups -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseButtonGroups">Buttons Groups</a>
+                        </h4>
+                    </div>
+                    <div id="collapseButtonGroups" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="ButtonGroups(1)">Horizontal</button>
+                            <button class="btn btn-default" onclick="ButtonGroups(2)">Vertical</button>
+                            <button class="btn btn-default" onclick="ButtonGroups(3)">Justified</button>
+                            <button class="btn btn-default" onclick="ButtonGroups(4)">Split Button Dropdown</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glyphicons -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a href="#" class="" data-toggle="modal" data-target="#GlyphiconsModal">Glyphicons</a>
+                        </h4>
+                    </div>
+                    <div id="collapseGlyphicons">
+                        <div id="GlyphiconsModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Choose your Glyphicon :</h4>
+                                    </div>
+                                    <div class="modal-body text-justify">
+                                        <button class="btn btn-default" onclick="Glyphicons('asterisk')"><span class="glyphicon glyphicon-asterisk"></span> Asterisk</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('euro')"><span class="glyphicon glyphicon-euro"></span> Euro</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('cloud')"><span class="glyphicon glyphicon-cloud"></span> Cloud </button>
+                                        <button class="btn btn-default" onclick="Glyphicons('envelope')"><span class="glyphicon glyphicon-envelope"></span> Envelope</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('pencil')"><span class="glyphicon glyphicon-pencil"></span> Pencil</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('plus')"><span class="glyphicon glyphicon-plus"></span> Plus </button>
+                                        <button class="btn btn-default" onclick="Glyphicons('minus')"><span class="glyphicon glyphicon-minus"></span> Minus </button>
+                                        <button class="btn btn-default" onclick="Glyphicons('glass')"><span class="glyphicon glyphicon-glass"></span> Glass </button>
+                                        <button class="btn btn-default" onclick="Glyphicons('music')"><span class="glyphicon glyphicon-music"></span> Music </button>
+                                        <button class="btn btn-default" onclick="Glyphicons('search')"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('heart')"><span class="glyphicon glyphicon-heart"></span> Heart </button>
+                                        <button class="btn btn-default" onclick="Glyphicons('star')"><span class="glyphicon glyphicon-star"></span> Star</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('star-empty')"><span class="glyphicon glyphicon-star-empty"></span> Empty Star</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('user')"><span class="glyphicon glyphicon-user"></span> User</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('film')"><span class="glyphicon glyphicon-film"></span> Film</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('th-large')"><span class="glyphicon glyphicon-th-large"></span> Th Large</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('th')"><span class="glyphicon glyphicon-th"></span> Th</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('th-list')"><span class="glyphicon glyphicon-th-list"></span> Th List</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('ok')"><span class="glyphicon glyphicon-ok"></span> Ok</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('remove')"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('zoom-in')"><span class="glyphicon glyphicon-zoom-in"></span> Zoom-in</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('zoom-out')"><span class="glyphicon glyphicon-zoom-out"></span> Zoom-out</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('off')"><span class="glyphicon glyphicon-off"></span> Off</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('signal')"><span class="glyphicon glyphicon-signal"></span> Signal</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('cog')"><span class="glyphicon glyphicon-cog"></span> Cog</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('trash')"><span class="glyphicon glyphicon-trash"></span> Trash</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('home')"><span class="glyphicon glyphicon-home"></span> Home</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('file')"><span class="glyphicon glyphicon-file"></span> File</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('time')"><span class="glyphicon glyphicon-time"></span> Time</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('road')"><span class="glyphicon glyphicon-road"></span> Road</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('download-alt')"><span class="glyphicon glyphicon-download-alt"></span> Download</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('download')"><span class="glyphicon glyphicon-download"></span> Download</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('upload')"><span class="glyphicon glyphicon-upload"></span> Upload</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('inbox')"><span class="glyphicon glyphicon-inbox"></span> Inbox</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('play-circle')"><span class="glyphicon glyphicon-play-circle"></span> Play</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('repeat')"><span class="glyphicon glyphicon-repeat"></span> Repeat</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('refresh')"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('list-alt')"><span class="glyphicon glyphicon-list-alt"></span> List-alt</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('lock')"><span class="glyphicon glyphicon-lock"></span> Lock</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('flag')"><span class="glyphicon glyphicon-flag"></span> Flag</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('headphones')"><span class="glyphicon glyphicon-headphones"></span> Headphones</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('volume-off')"><span class="glyphicon glyphicon-volume-off"></span> Volume Off</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('volume-down')"><span class="glyphicon glyphicon-volume-down"></span> Volume Down</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('volume-up')"><span class="glyphicon glyphicon-volume-up"></span> Volume Up</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('qrcode')"><span class="glyphicon glyphicon-qrcode"></span> Qrcode</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('barcode')"><span class="glyphicon glyphicon-barcode"></span> Barcode</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tag')"><span class="glyphicon glyphicon-tag"></span> Tag</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tags')"><span class="glyphicon glyphicon-tags"></span> Tags</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('book')"><span class="glyphicon glyphicon-book"></span> Book</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('bookmark')"><span class="glyphicon glyphicon-bookmark"></span> Bookmark</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('print')"><span class="glyphicon glyphicon-print"></span> Print</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('camera')"><span class="glyphicon glyphicon-camera"></span> Camera</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('font')"><span class="glyphicon glyphicon-font"></span> Font</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('bold')"><span class="glyphicon glyphicon-bold"></span> Bold</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('italic')"><span class="glyphicon glyphicon-italic"></span> Italic</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('text-height')"><span class="glyphicon glyphicon-text-height"></span> Text Height</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('text-width')"><span class="glyphicon glyphicon-text-width"></span> Text Width</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('align-left')"><span class="glyphicon glyphicon-align-left"></span> Align Left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('align-center')"><span class="glyphicon glyphicon-align-center"></span> Align Center</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('align-right')"><span class="glyphicon glyphicon-align-right"></span> Align Right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('align-justify')"><span class="glyphicon glyphicon-align-justify"></span> Align Justify</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('list')"><span class="glyphicon glyphicon-list"></span> List</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('indent-left')"><span class="glyphicon glyphicon-indent-left"></span> Indent Left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('indent-right')"><span class="glyphicon glyphicon-indent-right"></span> Indent Right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('facetime-video')"><span class="glyphicon glyphicon-facetime-video"></span> Facetime</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('picture')"><span class="glyphicon glyphicon-picture"></span> Picture</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('map-marker')"><span class="glyphicon glyphicon-map-marker"></span> Map</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('adjust')"><span class="glyphicon glyphicon-adjust"></span> Adjust</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tint')"><span class="glyphicon glyphicon-tint"></span> Tint</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('edit')"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('share')"><span class="glyphicon glyphicon-share"></span> Share</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('check')"><span class="glyphicon glyphicon-check"></span> Check</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('move')"><span class="glyphicon glyphicon-move"></span> Move</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('step-backward')"><span class="glyphicon glyphicon-step-backward"></span> Step Backward</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('fast-backward')"><span class="glyphicon glyphicon-fast-backward"></span> Fast Backward</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('backward')"><span class="glyphicon glyphicon-backward"></span> Backward</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('play')"><span class="glyphicon glyphicon-play"></span> Play</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('pause')"><span class="glyphicon glyphicon-pause"></span> Pause</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('stop')"><span class="glyphicon glyphicon-stop"></span> Stop</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('forward')"><span class="glyphicon glyphicon-forward"></span> Forward</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('fast-forward')"><span class="glyphicon glyphicon-fast-forward"></span> Fast Forward</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('step-forward')"><span class="glyphicon glyphicon-step-forward"></span> Step Forward</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('eject')"><span class="glyphicon glyphicon-eject"></span> Eject</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('chevron-left')"><span class="glyphicon glyphicon-chevron-left"></span> Left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('chevron-right')"><span class="glyphicon glyphicon-chevron-right"></span> Right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('plus-sign')"><span class="glyphicon glyphicon-plus-sign"></span> Plus</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('minus-sign')"><span class="glyphicon glyphicon-minus-sign"></span> Minus</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('remove-sign')"><span class="glyphicon glyphicon-remove-sign"></span> Remove</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('ok-sign')"><span class="glyphicon glyphicon-ok-sign"></span> OK</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('question-sign')"><span class="glyphicon glyphicon-question-sign"></span> Question</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('info-sign')"><span class="glyphicon glyphicon-info-sign"></span> Info</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('screenshot')"><span class="glyphicon glyphicon-screenshot"></span> Screenshot</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('remove-circle')"><span class="glyphicon glyphicon-remove-circle"></span> Remove</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('ok-circle')"><span class="glyphicon glyphicon-ok-circle"></span> OK</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('ban-circle')"><span class="glyphicon glyphicon-ban-circle"></span> Ban</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('arrow-left')"><span class="glyphicon glyphicon-arrow-left"></span> Left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('arrow-right')"><span class="glyphicon glyphicon-arrow-right"></span> Right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('arrow-up')"><span class="glyphicon glyphicon-arrow-up"></span> Up</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('arrow-down')"><span class="glyphicon glyphicon-arrow-down"></span> Down</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('share-alt')"><span class="glyphicon glyphicon-share-alt"></span> Share</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('resize-full')"><span class="glyphicon glyphicon-resize-full"></span> Resize</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('resize-small')"><span class="glyphicon glyphicon-resize-small"></span> Resize</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('exclamation-sign')"><span class="glyphicon glyphicon-exclamation-sign"></span> Exclamation</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('gift')"><span class="glyphicon glyphicon-gift"></span> Gift</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('leaf')"><span class="glyphicon glyphicon-leaf"></span> Leaf</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('fire')"><span class="glyphicon glyphicon-fire"></span> Fire</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('eye-open')"><span class="glyphicon glyphicon-eye-open"></span> Eye-open</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('eye-close')"><span class="glyphicon glyphicon-eye-close"></span> Eye-close</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('warning-sign')"><span class="glyphicon glyphicon-warning-sign"></span> Warning</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('plane')"><span class="glyphicon glyphicon-plane"></span> Plane</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('calendar')"><span class="glyphicon glyphicon-calendar"></span> Calendar</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('random')"><span class="glyphicon glyphicon-random"></span> Random</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('comment')"><span class="glyphicon glyphicon-comment"></span> Comment</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('magnet')"><span class="glyphicon glyphicon-magnet"></span> Magnet</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('chevron-up')"><span class="glyphicon glyphicon-chevron-up"></span> Up</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('chevron-down')"><span class="glyphicon glyphicon-chevron-down"></span> Chevron down</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('retweet')"><span class="glyphicon glyphicon-retweet"></span> Retweet</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('shopping-cart')"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('folder-close')"><span class="glyphicon glyphicon-folder-close"></span> Folder</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('folder-open')"><span class="glyphicon glyphicon-folder-open"></span> Folder</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('resize-vertical')"><span class="glyphicon glyphicon-resize-vertical"></span> Resize</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('resize-horizontal')"><span class="glyphicon glyphicon-resize-horizontal"></span> Resize</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('hdd')"><span class="glyphicon glyphicon-hdd"></span> HDD</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('bullhorn')"><span class="glyphicon glyphicon-bullhorn"></span> Bullhorn</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('bell')"><span class="glyphicon glyphicon-bell"></span> Bell</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('certificate')"><span class="glyphicon glyphicon-certificate"></span> Certificate</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('thumbs-up')"><span class="glyphicon glyphicon-thumbs-up"></span> Like</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('thumbs-down')"><span class="glyphicon glyphicon-thumbs-down"></span> Unlike</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('hand-right')"><span class="glyphicon glyphicon-hand-right"></span> Right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('hand-left')"><span class="glyphicon glyphicon-hand-left"></span> Left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('hand-up')"><span class="glyphicon glyphicon-hand-up"></span> Up</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('hand-down')"><span class="glyphicon glyphicon-hand-down"></span> Down</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('circle-arrow-right')"><span class="glyphicon glyphicon-circle-arrow-right"></span> Right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('circle-arrow-left')"><span class="glyphicon glyphicon-circle-arrow-left"></span> Left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('circle-arrow-up')"><span class="glyphicon glyphicon-circle-arrow-up"></span> Up</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('circle-arrow-down')"><span class="glyphicon glyphicon-circle-arrow-down"></span> Down</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('globe')"><span class="glyphicon glyphicon-globe"></span> Globe</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('wrench')"><span class="glyphicon glyphicon-wrench"></span> Wrench</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tasks')"><span class="glyphicon glyphicon-tasks"></span> Tasks</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('filter')"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('briefcase')"><span class="glyphicon glyphicon-briefcase"></span> Briefcase</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('fullscreen')"><span class="glyphicon glyphicon-fullscreen"></span> Fullscreen</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('dashboard')"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('paperclip')"><span class="glyphicon glyphicon-paperclip"></span> Paperclip</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('heart-empty')"><span class="glyphicon glyphicon-heart-empty"></span> Heart</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('link')"><span class="glyphicon glyphicon-link"></span> Link</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('phone')"><span class="glyphicon glyphicon-phone"></span> Phone</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('pushpin')"><span class="glyphicon glyphicon-pushpin"></span> Pushpin</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('usd')"><span class="glyphicon glyphicon-usd"></span> USD</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sort-by-attributes')"><span class="glyphicon glyphicon-sort-by-attributes"></span> Sort by Attributes</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sort-by-attributes-alt')"><span class="glyphicon glyphicon-sort-by-attributes-alt"></span> Sort by Attributes</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('unchecked')"><span class="glyphicon glyphicon-unchecked"></span> Unchecked</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('expand')"><span class="glyphicon glyphicon-expand"></span> Expand</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('collapse-down')"><span class="glyphicon glyphicon-collapse-down"></span> Collapse</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('collapse-up')"><span class="glyphicon glyphicon-collapse-up"></span> Collapse</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('log-in')"><span class="glyphicon glyphicon-log-in"></span> Log in</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('flash')"><span class="glyphicon glyphicon-flash"></span> Flash</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('gbp')"><span class="glyphicon glyphicon-gbp"></span> GBP</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sort')"><span class="glyphicon glyphicon-sort"></span> Sort</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sort-by-alphabet')"><span class="glyphicon glyphicon-sort-by-alphabet"></span> Sort by Alphabet</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sort-by-alphabet-alt')"><span class="glyphicon glyphicon-sort-by-alphabet-alt"></span> Sort by Alphabet</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sort-by-order')"><span class="glyphicon glyphicon-sort-by-order"></span> Sort by Order</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sort-by-order-alt')"><span class="glyphicon glyphicon-sort-by-order-alt"></span> Sort by Order</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('log-out')"><span class="glyphicon glyphicon-log-out"></span> Log out</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('new-window')"><span class="glyphicon glyphicon-new-window"></span> New Window</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('record')"><span class="glyphicon glyphicon-record"></span> Record</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('save')"><span class="glyphicon glyphicon-save"></span> Save</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('open')"><span class="glyphicon glyphicon-open"></span> Open</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('saved')"><span class="glyphicon glyphicon-saved"></span> Saved</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('upload')"><span class="glyphicon glyphicon-upload"></span> Upload</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('export')"><span class="glyphicon glyphicon-export"></span> Export</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('send')"><span class="glyphicon glyphicon-send"></span> Send</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('floppy-disk')"><span class="glyphicon glyphicon-floppy-disk"></span> Disk</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('floppy-saved')"><span class="glyphicon glyphicon-floppy-saved"></span> Disk Saved</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('floppy-remove')"><span class="glyphicon glyphicon-floppy-remove"></span> Remove Disk</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('floppy-save')"><span class="glyphicon glyphicon-floppy-save"></span> Save Disk</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('floppy-open')"><span class="glyphicon glyphicon-floppy-open"></span> Open Disk</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('credit-card')"><span class="glyphicon glyphicon-credit-card"></span> Credit Card</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('transfer')"><span class="glyphicon glyphicon-transfer"></span> Transfer</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('cutlery')"><span class="glyphicon glyphicon-cutlery"></span> Cutlery</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('upload')"><span class="glyphicon glyphicon-upload"></span> Upload</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('compressed')"><span class="glyphicon glyphicon-compressed"></span> Compressed</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('earphone')"><span class="glyphicon glyphicon-earphone"></span> Earphone</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('phone-alt')"><span class="glyphicon glyphicon-phone-alt"></span> Phone</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tower')"><span class="glyphicon glyphicon-tower"></span> Tower</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('stats')"><span class="glyphicon glyphicon-stats"></span> Stats</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sd-video')"><span class="glyphicon glyphicon-sd-video"></span> Video</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('hd-video')"><span class="glyphicon glyphicon-hd-video"></span> Video</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('subtitles')"><span class="glyphicon glyphicon-subtitles"></span> Subtitles</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sound-stereo')"><span class="glyphicon glyphicon-sound-stereo"></span> Sound Stereo</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sound-dolby')"><span class="glyphicon glyphicon-sound-dolby"></span> Sound Dolby</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sound-5-1')"><span class="glyphicon glyphicon-sound-5-1"></span> Sound 5-1</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sound-6-1')"><span class="glyphicon glyphicon-sound-6-1"></span> Sound 6-1</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sound-7-1')"><span class="glyphicon glyphicon-sound-7-1"></span> Sound 7-1</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('copyright-mark')"><span class="glyphicon glyphicon-copyright-mark"></span> Copyright</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('registration-mark')"><span class="glyphicon glyphicon-registration-mark"></span> Registration Mark</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('cloud-download')"><span class="glyphicon glyphicon-cloud-download"></span> Download from Cloud</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('cloud-upload')"><span class="glyphicon glyphicon-cloud-upload"></span> Upload in Cloud</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tree-conifer')"><span class="glyphicon glyphicon-tree-conifer"></span> Tree</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tree-deciduous')"><span class="glyphicon glyphicon-tree-deciduous"></span> Tree</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('cd')"><span class="glyphicon glyphicon-cd"></span> CD</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('save-file')"><span class="glyphicon glyphicon-save-file"></span> Save File</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('open-file')"><span class="glyphicon glyphicon-open-file"></span> Open File</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('level-up')"><span class="glyphicon glyphicon-level-up"></span> Level-up</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('copy')"><span class="glyphicon glyphicon-copy"></span> Copy</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('paste')"><span class="glyphicon glyphicon-paste"></span> Bell</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('alert')"><span class="glyphicon glyphicon-alert"></span> Alert</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('equalizer')"><span class="glyphicon glyphicon-equalizer"></span> Equalizer</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('king')"><span class="glyphicon glyphicon-king"></span> King</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('queen')"><span class="glyphicon glyphicon-queen"></span> Queen</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('pawn')"><span class="glyphicon glyphicon-pawn"></span> Pawn</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('bishop')"><span class="glyphicon glyphicon-bishop"></span> Bishop</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('knight')"><span class="glyphicon glyphicon-knight"></span> Knight</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('baby-formula')"><span class="glyphicon glyphicon-baby-formula"></span> Baby-formula</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('tent')"><span class="glyphicon glyphicon-tent"></span> Tent</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('blackboard')"><span class="glyphicon glyphicon-blackboard"></span> Blackboard</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('bed')"><span class="glyphicon glyphicon-bed"></span> Bed</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('apple')"><span class="glyphicon glyphicon-apple"></span> Apple</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('erase')"><span class="glyphicon glyphicon-erase"></span> Erase</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('hourglass')"><span class="glyphicon glyphicon-hourglass"></span> Hourglass</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('lamp')"><span class="glyphicon glyphicon-lamp"></span> Lamp</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('duplicate')"><span class="glyphicon glyphicon-duplicate"></span> Duplicate</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('piggy-bank')"><span class="glyphicon glyphicon-piggy-bank"></span> Piggy-bank</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('scissors')"><span class="glyphicon glyphicon-scissors"></span> Scissors</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('bitcoin')"><span class="glyphicon glyphicon-bitcoin"></span> Bitcoin</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('yen')"><span class="glyphicon glyphicon-yen"></span> Yen</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('ruble')"><span class="glyphicon glyphicon-ruble"></span> Ruble</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('scale')"><span class="glyphicon glyphicon-scale"></span> Scale</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('ice-lolly')"><span class="glyphicon glyphicon-ice-lolly"></span> Ice-lolly</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('ice-lolly-tasted')"><span class="glyphicon glyphicon-ice-lolly-tasted"></span> Ice-lolly-tasted</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('education')"><span class="glyphicon glyphicon-education"></span> Education</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('option-horizontal')"><span class="glyphicon glyphicon-option-horizontal"></span> Option-horizontal</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('option-vertical')"><span class="glyphicon glyphicon-option-vertical"></span> Option-vertical</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('menu-hamburger')"><span class="glyphicon glyphicon-menu-hamburger"></span> Menu-hamburger</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('modal-window')"><span class="glyphicon glyphicon-modal-window"></span> Modal-window</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('oil')"><span class="glyphicon glyphicon-oil"></span> Oil</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('grain')"><span class="glyphicon glyphicon-grain"></span> Grain</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('sunglasses')"><span class="glyphicon glyphicon-sunglasses"></span> Sunglasses</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('text-size')"><span class="glyphicon glyphicon-text-size"></span> Text-size</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('text-color')"><span class="glyphicon glyphicon-text-color"></span> Text-color</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('text-background')"><span class="glyphicon glyphicon-text-background"></span> Text-background</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('object-align-top')"><span class="glyphicon glyphicon-object-align-top"></span> Object-align-top</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('object-align-bottom')"><span class="glyphicon glyphicon-object-align-bottom"></span> Object-align-bottom</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('object-align-horizontal')"><span class="glyphicon glyphicon-object-align-horizontal"></span> Object-align-horizontal</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('object-align-left')"><span class="glyphicon glyphicon-object-align-left"></span> Object-align-left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('object-align-vertical')"><span class="glyphicon glyphicon-object-align-vertical"></span> Object-align-vertical</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('object-align-right')"><span class="glyphicon glyphicon-object-align-right"></span> Object-align-right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('triangle-right')"><span class="glyphicon glyphicon-triangle-right"></span> Triangle-right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('triangle-left')"><span class="glyphicon glyphicon-triangle-left"></span> Triangle-left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('triangle-bottom')"><span class="glyphicon glyphicon-triangle-bottom"></span> Triangle-bottom</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('triangle-top')"><span class="glyphicon glyphicon-triangle-top"></span> Triangle-top</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('superscript')"><span class="glyphicon glyphicon-superscript"></span> Superscript</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('subscript')"><span class="glyphicon glyphicon-subscript"></span> Subscript</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('menu-left')"><span class="glyphicon glyphicon-menu-left"></span> Menu-left</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('menu-right')"><span class="glyphicon glyphicon-menu-right"></span> Menu-right</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('menu-down')"><span class="glyphicon glyphicon-menu-down"></span> Menu-down</button>
+                                        <button class="btn btn-default" onclick="Glyphicons('menu-up')"><span class="glyphicon glyphicon-menu-up"></span> Menu-up</button>
+                                    </div>
+                                    <!--<div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges/Labels -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseBadgesLabels">Badges / Labels</a>
+                        </h4>
+                    </div>
+                    <div id="collapseBadgesLabels" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="BadgesLabels(1)">Add Badge</button>
+                            <button class="btn btn-default" onclick="BadgesLabels(2)">Label Default</button>
+                            <button class="btn btn-default" onclick="BadgesLabels(3)">Label Primary</button>
+                            <button class="btn btn-default" onclick="BadgesLabels(4)">Label Success</button>
+                            <button class="btn btn-default" onclick="BadgesLabels(5)">Label Info</button>
+                            <button class="btn btn-default" onclick="BadgesLabels(6)">Label Warning</button>
+                            <button class="btn btn-default" onclick="BadgesLabels(7)">Label Danger</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseProgressBars">Progress Bars</a>
+                        </h4>
+                    </div>
+                    <div id="collapseProgressBars" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="ProgressBars(1)">Primary</button>
+                            <button class="btn btn-default" onclick="ProgressBars(2)">Success</button>
+                            <button class="btn btn-default" onclick="ProgressBars(3)">Info</button>
+                            <button class="btn btn-default" onclick="ProgressBars(4)">Warning</button>
+                            <button class="btn btn-default" onclick="ProgressBars(5)">Danger</button>
+                            <button class="btn btn-default" onclick="ProgressBars(6)">Primary Striped</button>
+                            <button class="btn btn-default" onclick="ProgressBars(7)">Success Striped</button>
+                            <button class="btn btn-default" onclick="ProgressBars(8)">Info Striped</button>
+                            <button class="btn btn-default" onclick="ProgressBars(9)">Warning Striped</button>
+                            <button class="btn btn-default" onclick="ProgressBars(10)">Danger Striped</button>
+                            <button class="btn btn-default" onclick="ProgressBars(11)">Primary Animated</button>
+                            <button class="btn btn-default" onclick="ProgressBars(12)">Success Animated</button>
+                            <button class="btn btn-default" onclick="ProgressBars(13)">Info Animated</button>
+                            <button class="btn btn-default" onclick="ProgressBars(14)">Warning Animated</button>
+                            <button class="btn btn-default" onclick="ProgressBars(15)">Danger Animated</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paginations -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsePaginations">Paginations / Pagers</a>
+                        </h4>
+                    </div>
+                    <div id="collapsePaginations" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Paginations(1)">Small Pagination</button>
+                            <button class="btn btn-default" onclick="Paginations(2)">Medium Pagination</button>
+                            <button class="btn btn-default" onclick="Paginations(3)">Large Pagination</button>
+                            <button class="btn btn-default" onclick="Paginations(4)">Breadcrumb</button>
+                            <button class="btn btn-default" onclick="Paginations(5)">Center Pager</button>
+                            <button class="btn btn-default" onclick="Paginations(6)">Side Pager</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- List Groups -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseListGroups">List Groups</a>
+                        </h4>
+                    </div>
+                    <div id="collapseListGroups" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="ListGroups(1)">Simple</button>
+                            <button class="btn btn-default" onclick="ListGroups(2)">With Linked Items</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panels -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsePanels">Panels</a>
+                        </h4>
+                    </div>
+                    <div id="collapsePanels" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Panels(1)">Default</button>
+                            <button class="btn btn-default" onclick="Panels(2)">Primary</button>
+                            <button class="btn btn-default" onclick="Panels(3)">Success</button>
+                            <button class="btn btn-default" onclick="Panels(4)">Info</button>
+                            <button class="btn btn-default" onclick="Panels(5)">Warning</button>
+                            <button class="btn btn-default" onclick="Panels(6)">Danger</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdowns -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDropdowns">Dropdowns</a>
+                        </h4>
+                    </div>
+                    <div id="collapseDropdowns" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Dropdowns(1)">Default</button>
+                            <button class="btn btn-default" onclick="Dropdowns(2)">Primary</button>
+                            <button class="btn btn-default" onclick="Dropdowns(3)">Success</button>
+                            <button class="btn btn-default" onclick="Dropdowns(4)">Info</button>
+                            <button class="btn btn-default" onclick="Dropdowns(5)">Warning</button>
+                            <button class="btn btn-default" onclick="Dropdowns(6)">Danger</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collapse -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseCollapses">Collapses</a>
+                        </h4>
+                    </div>
+                    <div id="collapseCollapses" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Collapses(1)">Collapse by Button</button>
+                            <button class="btn btn-default" onclick="Collapses(2)">Collapse by Panel</button>
+                            <button class="btn btn-default" onclick="Collapses(3)">Collapse by List Group</button>
+                            <button class="btn btn-default" onclick="Collapses(4)">Accordion</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabs/Pills -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTabsPills">Menu / Tabs / Pills</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTabsPills" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="TabsPills(1)">Vertical Menu</button>
+                            <button class="btn btn-default" onclick="TabsPills(2)">Horizontal Menu</button>
+                            <button class="btn btn-default" onclick="TabsPills(3)">Tab</button>
+                            <button class="btn btn-default" onclick="TabsPills(4)">Tab With Dropdown</button>
+                            <button class="btn btn-default" onclick="TabsPills(5)">Horizontal Pill</button>
+                            <button class="btn btn-default" onclick="TabsPills(6)">Vertical Pill</button>
+                            <button class="btn btn-default" onclick="TabsPills(7)">Pill with Dropdown</button>
+                            <button class="btn btn-default" onclick="TabsPills(8)">Centered Tab</button>
+                            <button class="btn btn-default" onclick="TabsPills(9)">Centered Pill</button>
+                            <button class="btn btn-default" onclick="TabsPills(10)">Toggable/Dynamic Tab</button>
+                            <button class="btn btn-default" onclick="TabsPills(11)">Toggable/Dynamic Pill</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Bar -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseNavBar">Navigation Bar</a>
+                        </h4>
+                    </div>
+                    <div id="collapseNavBar" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div>
+                                <label class="radio-inline"><input type="radio" id="navbarDefault" name="navbarType" checked>Default</label>
+                                <label class="radio-inline"><input type="radio" id="navbarInverted" name="navbarType">Inverted</label>
+                            </div>
+                            <button class="btn btn-default" onclick="NavBar(1)">Simple Navbar</button>
+                            <button class="btn btn-default" onclick="NavBar(2)">Fixed-Top Navbar</button>
+                            <button class="btn btn-default" onclick="NavBar(3)">Fixed-Bottom Navbar</button>
+                            <button class="btn btn-default" onclick="NavBar(4)">Navbar with Dropdown</button>
+                            <button class="btn btn-default" onclick="NavBar(5)">Right-Aligned Nabvar</button>
+                            <button class="btn btn-default" onclick="NavBar(6)">Collapsing Nabvar</button>
+                            <button class="btn btn-default" onclick="NavBar(7)">Affix</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Forms & Inputs -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseForms">Forms / Inputs</a>
+                        </h4>
+                    </div>
+                    <div id="collapseForms" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Forms(1)">Vertical Form</button>
+                            <button class="btn btn-default" onclick="Forms(2)">Horizontal Form</button>
+                            <button class="btn btn-default" onclick="Forms(3)">Inline Form</button>
+                            <hr/>
+                            <button class="btn btn-default" onclick="Forms(4)">Textbox</button>
+                            <button class="btn btn-default" onclick="Forms(5)">Textarea</button>
+                            <button class="btn btn-default" onclick="Forms(6)">Checkbox</button>
+                            <button class="btn btn-default" onclick="Forms(7)">Inline Checkbox</button>
+                            <button class="btn btn-default" onclick="Forms(8)">Radio Button</button>
+                            <button class="btn btn-default" onclick="Forms(9)">Inline Radio Button</button>
+                            <button class="btn btn-default" onclick="Forms(10)">Select</button>
+                            <button class="btn btn-default" onclick="Forms(11)">Help Taxt</button>
+                            <button class="btn btn-default" onclick="Forms(12)">Submit Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseCarousel">Carousel</a>
+                        </h4>
+                    </div>
+                    <div id="collapseCarousel" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Carousel(1)">Without Captions</button>
+                            <button class="btn btn-default" onclick="Carousel(2)">With Captions</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modals -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseModals">Modals</a>
+                        </h4>
+                    </div>
+                    <div id="collapseModals" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Modals(1)">Small Modal</button>
+                            <button class="btn btn-default" onclick="Modals(2)">Medium Modal</button>
+                            <button class="btn btn-default" onclick="Modals(3)">Large Modal</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tooltip -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTooltip">Tooltips</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTooltip" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Tooltip(1)">Top</button>
+                            <button class="btn btn-default" onclick="Tooltip(2)">Bottom</button>
+                            <button class="btn btn-default" onclick="Tooltip(3)">Left</button>
+                            <button class="btn btn-default" onclick="Tooltip(4)">Right</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popover -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsePopover">Popovers</a>
+                        </h4>
+                    </div>
+                    <div id="collapsePopover" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <button class="btn btn-default" onclick="Popover(1)">Toggling Top</button>
+                            <button class="btn btn-default" onclick="Popover(2)">Toggling Bottom</button>
+                            <button class="btn btn-default" onclick="Popover(3)">Toggling Left</button>
+                            <button class="btn btn-default" onclick="Popover(4)">Toggling Right</button>
+                            <button class="btn btn-default" onclick="Popover(5)">Focusing Top</button>
+                            <button class="btn btn-default" onclick="Popover(6)">Focusing Bottom</button>
+                            <button class="btn btn-default" onclick="Popover(7)">Focusing Left</button>
+                            <button class="btn btn-default" onclick="Popover(8)">Focusing Right</button>
+                            <button class="btn btn-default" onclick="Popover(9)">Hovering Top</button>
+                            <button class="btn btn-default" onclick="Popover(10)">Hovering Bottom</button>
+                            <button class="btn btn-default" onclick="Popover(11)">Hovering Left</button>
+                            <button class="btn btn-default" onclick="Popover(12)">Hovering Right</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Textarea and Iframe -->
+        <div class="col-md-10">
+            <div class="row">
+                <div id="submenu" class="col-md-12">
+                    <div class="col-md-9">
+                        <button class="btn btn-danger btn-sm" onclick="ClearTextarea()">Clear All</button> |
+                        <button class="btn btn-danger btn-sm" onclick="ClearHTML()">Clear HTML</button>
+                        <button class="btn btn-danger btn-sm" onclick="ClearCSS()">Clear CSS</button>
+                        <button class="btn btn-danger btn-sm" onclick="ClearJS()">Clear JS</button> |
+                        <button class="btn btn-default btn-sm" onclick="Break(1)">&lt;br/&gt;</button>
+                        <button class="btn btn-default btn-sm" onclick="Break(2)">&lt;hr/&gt;</button> |
+                        <button class="btn btn-success btn-sm" onclick="IframeCompile()">Result</button>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            <select class="form-control" id="selectView" onchange="ConfigureView()">
+                                <option value="1">HTML + CSS + JS + iframe</option>
+                                <option value="2">HTML + CSS + iframe</option>
+                                <option value="3">HTML + JS + iframe</option>
+                                <option value="4">CSS + JS + iframe</option>
+                                <option value="5">HTML + iframe</option>
+                                <option value="6">CSS + iframe</option>
+                                <option value="7">JS + iframe</option>
+                                <option value="8">Just HTML</option>
+                                <option value="9">Just CSS</option>
+                                <option value="10">Just JS</option>
+                                <option value="11">Just iframe</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="divTextResult" class="col-md-6">
+                    <textarea id="textHTMLResult" name="textHTMLResult"><!-- HTML --></textarea>
+                </div>
+
+                <div id="divCssResult" class="col-md-6">
+                    <textarea id="textCssResult" name="textCssResult">/* CSS */</textarea>
+                </div>
+
+                <div id="divJSResult" class="col-md-6">
+                    <textarea id="textJSResult" name="textJSResult">// JAVASCRIPT</textarea>
+                </div>
+
+                <div id="divIframeResult" class="col-md-6">
+                    <iframe id="iframeResult"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap3.3.6/js/bootstrap.min.js"></script>
+    <script src="codemirror/codemirror.js"></script>
+    <script src="codemirror/selection-pointer.js"></script>
+    <script src="codemirror/matchbrackets.js"></script>
+    <script src="codemirror/continuecomment.js"></script>
+    <script src="codemirror/comment.js"></script>
+    <script src="codemirror/xml.js"></script>
+    <script src="codemirror/javascript.js"></script>
+    <script src="codemirror/css.js"></script>
+    <script src="codemirror/show-hint.js"></script>
+    <script src="codemirror/css-hint.js"></script>
+    <script src="codemirror/vbscript.js"></script>
+    <script src="codemirror/htmlmixed.js"></script>
+    <script src="codemirror/formatting.js"></script>
+    <script src="od-bootstrap.js"></script>
+</body>
+
+</html>

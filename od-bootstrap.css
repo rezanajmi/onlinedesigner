@@ -1,0 +1,44 @@
+body {
+    background-color: #333;
+}
+
+.version{
+    color:white;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+#sidebar {
+    height: 700px;
+    overflow: auto;
+}
+
+.panel-body button {
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.panel-title a {
+    color: white;
+}
+
+#submenu {
+    margin-bottom: 5px;
+}
+
+.CodeMirror{
+    height: 330px;
+    margin-bottom: 10px;
+}
+
+#iframeResult {
+    width: 100%;
+    min-height: 330px;
+    padding: 10px;
+    border: 1px solid #222;
+    background-color: white;
+}
+
+#GlyphiconsModal button {
+    margin-bottom: 5px;
+}
